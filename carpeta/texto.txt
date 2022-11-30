@@ -1,0 +1,43 @@
+Curso:
+2022/2023
+Fecha:
+30/11/22
+Grupo:
+ 
+ 1ºH
+Etapa:
+ FGPS
+Asignatura/Módulo:
+Programación de Servicios y Procesos
+Profesor:
+Gorka Sanz Lopategui
+
+
+EJERCICIO 1 (5 puntos)
+
+Implementa en python un código de Productor Consumidor mediante cola sincronizada tal que:
+-El productor produce números enteros mayor que 10 y menor que 1000, el productor produce 10 números cada vez que los almacena en la cola y el tiempo de espera entre la generación de un número y otro es de PT segundos (1 punto)
+-El consumidor lee X números de la cola de golpe, calcula el MCD de esos X números .(1,5 punto)
+
+el tiempo de espera entre la lectura de X elementos cola y la siguiente lectura de los siguientes X elementos es de  CT segundos (1 punto)
+Prueba el algoritmo con los distintos casos usando una relación de productor:consumidor de     
+1:1   con PT=1  CT=4 y X=3 (0,5 puntos)
+4:2 con PT=2  CT=4 y X=2 (0,5 puntos)
+2:10 con PT=1  CT=10 y X=4 (0,5 puntos)
+NOTA DAR UN PEQUEÑO TIEMPO ENTRE EL START DE CADA CONSUMIDOR Y/O PRODUCTOR Y EL SIGUIENTE PARA PODER VER BIEN LOS MENSAJES DEL PRINT
+Pista: https://es.stackoverflow.com/questions/426515/c%C3%B3mo-puedo-calcular-el-mcd-de-dos-o-m%C3%A1s-n%C3%BAmeros-sin-saber-cu%C3%A1ntos-n%C3%BAmeros-son
+EJERCICIO 2 (5 puntos)
+
+Get a list of files (from the current directory or from all the files in the “home” folder. 
+• Process each file: Pista os.listdir():
+• 1. get size of each file 
+	file_stats = os.stat(file_name)
+print(file_stats)
+print(f'File Size in Bytes is {file_stats.st_size}')
+print(f'File Size in MegaBytes is {file_stats.st_size / (1024 * 1024)}')
+
+• 2. count how many vowels(vocales) appear in the file. 
+https://www.geeksforgeeks.org/python-program-to-count-vowels-lines-characters-in-text-file/
+Write the result of (1) and (2) as values in a python dictionary using the filename as dictionary´s key (1 punto)
+The script should accept the number of threads to use required as user INPUT. (2 puntos)
+Make (2) thread safe using locks (2 puntos)
