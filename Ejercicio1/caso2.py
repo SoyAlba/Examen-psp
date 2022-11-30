@@ -15,7 +15,7 @@ def producer():
             x = random.randint(10, 1000)
             queue.put(x)
 
-            time.sleep(1)
+            time.sleep(2)
 
 
 def consumer():
@@ -23,10 +23,9 @@ def consumer():
         if not queue.empty():
             num1 = queue.get()
             num2 = queue.get()
-            num3 = queue.get()
             queue.task_done()
             time.sleep(4)
-            print("El MCD de ", num1, " , ", num2," y ", num3," es: ", mcd_n(n=(num1, num2, num3)))
+            print("El MCD de ", num1, " y ", num2," es: ", mcd(n1=num1, n2=num2))
 
 
 def mcd(n1, n2):

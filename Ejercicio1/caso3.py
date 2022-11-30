@@ -24,9 +24,10 @@ def consumer():
             num1 = queue.get()
             num2 = queue.get()
             num3 = queue.get()
+            num4 = queue.get()
             queue.task_done()
-            time.sleep(4)
-            print("El MCD de ", num1, " , ", num2," y ", num3," es: ", mcd_n(n=(num1, num2, num3)))
+            time.sleep(10)
+            print("El MCD de ", num1, " , ", num2," , ", num3," y ", num4," es: ", mcd_n(n=(num1, num2, num3, num4)))
 
 
 def mcd(n1, n2):
