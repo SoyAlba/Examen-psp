@@ -28,7 +28,7 @@ def counting(filename):
 
         elif alpha == "\n":
             line += 1
-    dic=dict(zip(["vowels","lines","characters","file_stats"],[vowel,line,character,file_stats]))
+    dic=dict(zip(["name","vowels","file_stats"],[filename,vowel,{file_stats.st_size}]))
     print(dic)
 
 def main():
