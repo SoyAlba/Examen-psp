@@ -28,17 +28,16 @@ def counting(filename):
 
         elif alpha == "\n":
             line += 1
+    dic=dict(zip(["vowels","lines","characters","file_stats"],[vowel,line,character,file_stats]))
+    print(dic)
 
-    print("Number of vowels in ", filename, " = ", vowel)
-    print("New Lines in ", filename, " = ", line)
-    print("Number of characters in ", filename, " = ", character)
-    print(file_stats)
-    print(f'File Size in Bytes is {file_stats.st_size}')
-    print(f'File Size in MegaBytes is {file_stats.st_size / (1024 * 1024)}')
+def main():
+    threads=int(input("Press the number of threads to continue..."))
+    with ThreadPoolExecutor(threads) as executor:
+        for file in dirs:
+            executor.submit(counting, foldel_name + "/" + file)
 
-with ThreadPoolExecutor(10) as executor:  
-    for filename in dirs:  
-        executor.submit(counting, filename)
-    for result in executor.map(counting(filename), dirs):
-        print(result)
+if __name__ == '__main__':
+    main()
+
 
